@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://www.lanzate.com.do/formLanzate/ -->
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=divice-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>FORMULARIO REGISTRO LANZATE</title>
+	<link rel="stylesheet" href="./FORMULARIO REGISTRO LANZATE_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="./FORMULARIO REGISTRO LANZATE_files/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./FORMULARIO REGISTRO LANZATE_files/estilos.css">
+	<!-- Sweet Alert -->
+	<link href="./FORMULARIO REGISTRO LANZATE_files/sweetalert.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="https://www.lanzate.com.do/formLanzate/images/favicon.png">
+</head>
+<body style="background: -moz-linear-gradient(-45deg, #DA9326 0%, #529091 80%); background: -webkit-linear-gradient(-45deg, #DA9326 0%, #529091 80%); background: linear-gradient(135deg,#DA9326 0%, #529091 80%); background-repeat: no-repeat; background-size: 100% 800px; display: flex; flex-direction: column;">
+<div class="container-fluid h-100">
+	<div class="row show_error">
+		<div class="col-lg-3 col-md-3 col-xs-12 col-sm-12"></div>
+		<div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
+			<div class="alert alert-danger">
+				Cedula no encontrada
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-xs-12 col-sm-12"></div>
+	</div>
+
+	<div class="row validar_miembro">
+		<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+			<h1 class="display-4"><img src="./FORMULARIO REGISTRO LANZATE_files/logoLanzate-03.png" alt="logo lanzate" width="300"></h1>
+			<p class="lead"><strong style="text-shadow: 3px 2px white; font-weight: 800;">HERRAMIENTA ELECTORAL</strong></p>
+			<div class="consultar">
+				<form name="consultar" method="post" onsubmit="return false;">
+					<div class="form-group">
+						<button type="submit" class="btn btn-warning btn-lg btn-block" onclick="location.href='registroSimpatizante.html'">Registro de Simpatizante</button>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                            <button type="submit" class="btn btn-warning btn-lg btn-block" onclick="location.href='login.html'">Iniciar Sesion</button>
+                    </div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+</div>
+<footer>
+
+</footer>
+
+<!--Core js-->
+<script src="./FORMULARIO REGISTRO LANZATE_files/jquery.min.js.descarga"></script>
+<script src="./FORMULARIO REGISTRO LANZATE_files/bootstrap.min.js.descarga" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./FORMULARIO REGISTRO LANZATE_files/jquery.maskedinput.js.descarga"></script>
+<!-- Sweet Alert -->
+<script src="./FORMULARIO REGISTRO LANZATE_files/sweetalert.min.js.descarga"></script>
+<!-- custom functions js -->
+<script type="text/javascript" src="./FORMULARIO REGISTRO LANZATE_files/functions.js.descarga"></script>
+<script type="text/javascript">
+$(document).ready(function($){
+	$("#cedula, #cedula_v").mask("999-9999999-9");
+	$("#movil").mask("999-999-9999");
+
+	$('.save').on('click', function() {
+    var $this = $(this);
+    var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> Guardando la información...';
+    if ($(this).html() !== loadingText) {
+      $this.data('original-text', $(this).html());
+      $this.html(loadingText);
+    }
+    setTimeout(function() {
+      $this.html($this.data('original-text'));
+    }, 10000);
+  });
+
+});
+</script>
+</body>
+</html>

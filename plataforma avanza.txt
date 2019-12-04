@@ -1,0 +1,31 @@
+lanzaelvoto.do
+orden de mando
+coordinador nacional
+coordinador provincial
+coordinador municipal
+coordinador ditrito municipal
+coordinador de recinto...
+todos pueden crear coordinadores de recinto
+max de 5 usuarios por coordinadores
+
+todos son coordinadores
+cada rol creara a los users debajo de ellos
+
+registro de simpatizante
+y al registrar tu cedula te apareza el nombre
+que para guardar aparezca un numero de telefono direccion que te permita guardar
+correo opcional
+
+
+buzon de colsultas
+para saber toda la info de las personas que sean usuarios
+
+
+notificaciones y recordatorios y cualquier alerta que se pueda dar dependiendo de tu nivel
+
+toda la informacion estaria clasificada por recinto y mesa electoral
+orden
+Escuela
+colegios de votacion se fucionan y crean una mesa...son 4 colegios
+un sermaforo para para poder saber cuantos estan a favor, en contra, e indecisos
+

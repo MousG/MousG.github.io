@@ -1,0 +1,219 @@
+function consultar_miembro(){
+
+ 	var cedula = $('.cedula_c').val();
+
+ 	if (cedula != "" && cedula !="___-_______-_"){
+
+ 	$.ajax({
+
+		type:"POST",
+
+		dataType:"html",
+
+		url:"inc/consultas_miembros.php",
+
+		data: "padron=true&cedula="+cedula,
+
+		success: function(resp){//document.write(resp);
+
+			$('#cedula_v').val(cedula);
+
+			json = $.parseJSON(resp);
+
+			console.log(json);
+
+			for(var i=0;i<json.length;i++)
+
+			{//inicio for
+
+				var NombreMiembro = json[i].Nombre;
+
+				var recinto_e = json[i].Recinto;
+
+				var colegio_e = json[i].Colegio;
+
+				var FechaNacimiento = json[i].Nacimiento;
+
+				var Genero = json[i].Sexo;
+
+				var idprovincia = json[i].id_provincia
+
+				var idmunicipio = json[i].id_municipio
+
+				var provincia = json[i].Provincia
+
+				var municipio = json[i].Municipio
+
+				var direccion_recinto = json[i].DireccionRecinto
+
+				var sector_paraje = json[i].Sector
+
+				var codigoRecintoE = json[i].CodigoRecinto_e
+
+			}//final for
+
+			$(document).ready(function() {
+
+				$(".nombre").val(NombreMiembro).attr('readonly', true);
+
+				$(".recinto").val(recinto_e).attr('readonly', true);
+
+				$(".colegio-electoral").val(colegio_e).attr('readonly', true);
+
+				$(".nacimiento").val(FechaNacimiento);
+
+				$(".sexo").val(Genero);
+
+				$(".id_provincia").val(idprovincia);
+
+				$(".id_municipio").val(idmunicipio);
+
+				$(".Provincia").val(provincia);
+
+				$(".Municipio").val(municipio);
+
+				$(".DireccionRecinto").val(direccion_recinto);
+
+				$(".Sector").val(sector_paraje);
+
+				$(".CodigoRecinto_e").val(codigoRecintoE);
+
+				// $("[name=fullname]").val(nombreComp);
+
+				// $("#nivel option[value="+nivel+"]").attr('selected', true);
+
+				// $("[name=register]").attr('onClick','editar_usuarios('+idusuario+');');
+
+				// $("[name=register]").attr('value','Guardar');
+
+				if(resp != 2){
+
+					$('.registro_miembro').fadeIn(300).css("display", "flex");
+
+					$('.validar_miembro').fadeOut(300);
+
+					$('.show_error').fadeIn(300).css("display", "none");
+
+				}else{
+
+					$('.show_error').fadeIn(300).css("display", "flex");
+
+				}
+
+				// When clicking on the button close or the mask layer the popup closed
+
+			});
+
+		}//final function con variable resp
+
+	});
+
+ }else{
+
+ 	alert('Digite su cédula');
+
+ }
+
+}
+
+
+
+function registrar_miembro(){
+
+	var uid = 0;
+
+	var nombre = $(".registro_miembro .nombre").val();
+
+	var cedula = $(".registro_miembro .cedula_v").val();
+
+	var direccion_mi = $(".registro_miembro .direccion").val();
+
+	var nacimiento = $(".registro_miembro .nacimiento").val();
+
+	var genero = $(".registro_miembro .sexo").val();
+
+	var nivel = 4;
+
+	var de_provincia = $(".registro_miembro .Provincia").val();
+
+	var de_municipio = $(".registro_miembro .Municipio").val();
+
+	var colegio_electoral = $(".registro_miembro .colegio-electoral").val();
+
+	var recinto = $(".registro_miembro .recinto").val();
+
+	var direccion_recinto = $(".registro_miembro .DireccionRecinto").val();
+
+	var codigo_recinto = $(".registro_miembro .CodigoRecinto_e").val();
+
+	// var correo = $(".registro_miembro [name=correo]").val();
+
+	var movil = $(".registro_miembro .movil").val();
+
+	// var otro_telefono = $(".registro_miembro #other_phone").val();
+
+	var sector = $(".registro_miembro .Sector").val();
+
+    var provincia_u = $(".registro_miembro .id_provincia").val();
+
+    var municipio_u = $(".registro_miembro .id_municipio").val();
+
+    var coordinador = $(".registro_miembro .coordinador").val();
+
+    var correo = $(".registro_miembro .correo").val();
+
+    var facebook = $(".registro_miembro .facebook").val();
+    var twitter = $(".registro_miembro .twitter").val();
+    var instagram = $(".registro_miembro .instagram").val();
+
+    var provincia_res = $(".registro_miembro .provincia_res").val();
+    var municipio_res = $(".registro_miembro .municipio_res").val();
+    var sector_res = $(".registro_miembro .sector_res").val();
+
+    var total_miembros = 0;
+
+    var total_hombres = 0;
+
+    var total_mujeres = 0;
+
+    var idmunicipio = 0;
+
+    var idsector = 0;
+
+    var idbarrio = 0;
+
+    var idgrupo = 1;
+
+    if(nombre != '' && cedula != '' && nacimiento != '' && genero != '' && movil !=  '' && de_provincia != '' && de_municipio != '' && colegio_electoral != '' && recinto != '' && direccion_recinto != '' && correo !=''  && provincia_res !=' ' && municipio_res != '' && sector_res != ''){
+
+    $.ajax({
+            type:"POST",
+            dataType:"html",
+            url:"inc/consultas_miembros.php",
+            data: "registrar=true&nombre="+nombre+"&cedula="+cedula+"&nacimiento="+nacimiento+"&genero="+genero+"&total_miembros="+total_miembros+"&total_hombres="+total_hombres+"&total_mujeres="+total_mujeres+"&idmunicipio="+idmunicipio+"&idsector="+idsector+"&idbarrio="+idbarrio+"&movil="+movil+"&codigo_colegio="+colegio_electoral+"&recinto="+recinto+"&direccion_recinto="+direccion_recinto+"&codigo_recinto="+codigo_recinto+"&sector="+sector+"&de_provincia="+de_provincia+"&de_municipio="+de_municipio+"&provincia="+provincia_u+"&municipio="+municipio_u+"&direccion="+direccion_mi+"&nivel="+nivel+"&uid="+uid+"&idgrupo="+idgrupo+"&coordinador="+coordinador+"&correo="+correo+"&facebook="+facebook+"&twitter="+twitter+"&instagram="+instagram+"&provincia_res="+provincia_res+"&municipio_res="+municipio_res+"&sector_res="+sector_res,
+            success: function(resp){
+            	console.log(resp);
+                if(resp == true){
+                    swal({
+                        title: "Registro correcto!",
+                        text: "Se registro a: " + nombre,
+                        type: "success"
+                    },function(){
+                    	setTimeout(function(){ location.reload(); }, 1000);
+                    });
+                }else if(resp == 3){
+                    swal("Error!", "No se pudo registrar a: " + nombre + " \n motivo: cédula ya existe.", "error");
+                }else{
+                	swal("Error!", "No se pudo registrar a: " + nombre, "error");
+                }
+            }
+        });
+	}else{
+		swal({
+			html: true,
+            title: "Faltan campos por llenar!",
+            text: "Los campos requeridos son: <strong>Nombre, Cédula, Movil, Correo Electrónico, Provincia, Municipio, Sector. </strong>",
+            type: "warning"
+        });
+	}
+}

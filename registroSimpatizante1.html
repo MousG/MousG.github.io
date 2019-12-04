@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+  <title>Registro de Simpatizantes</title>    
+  
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    
+</head>
+<body class="bg-gradient-info">
+
+    <div class="container">
+
+        <!-- Outer Row -->
+        <div class="row justify-content-center">
+    
+          <div class="col-xl-10 col-lg-12 col-md-9">
+    
+            <div class="card o-hidden border-0 shadow-lg my-5">
+              <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                  <div>
+                    <img src="FORMULARIO REGISTRO LANZATE_files/logoLanzate-03.png"  WIDTH=450 HEIGHT=400>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="p-5">
+                      <div class="text-center">
+                        <h1 class="h4 text-gray-900 mb-2">REGISTRATE COMO SIMPATIZANTE</h1>
+                      </div>
+                      <form class="user">
+                        <div class="form-group">
+                          <input type="search" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Ingrese su Cedula">
+                        </div>
+                        
+                        <button type="button" class="btn btn-primary btn-user btn-block" data-toggle="modal" data-target="#form-guardar">Buscar</button>
+                        <button type="button" class="btn btn-danger btn-user btn-block" onclick="location.href='index.html'">Atras</button>
+                      </form>
+                      <hr>
+                      <div class="text-center">
+                        <a class="small" href="register.html">Create an Account!</a>
+                      </div>
+                      <div class="text-center">
+                        <a class="small" href="login.html">Already have an account? Login!</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+
+
+  <!--******************************************************************************************-->
+  <div class="modal fade" id="form-guardar" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Datos para Guardar</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+          <h4>George Junior Luciano Jimenez</h4>
+          <h5>402-0046119-8</h5>
+        <form>
+          <div class="form-group">
+            <label class="col-form-label">Celular: </label>
+            <input type="text" class="form-control" id="n-celular" placeholder="809-000-1111">
+          </div>
+          <div class="form-group">
+                <label class="col-form-label">Correo Electronico: </label>
+                <input type="text" class="form-control" id="email" placeholder="Opcional">
+              </div>
+          <div class="form-group">
+            <label for="message-text" class="col-form-label">Direccion</label>
+            <textarea class="form-control" id="direccion"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button id="btnSA_3" type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+	<!-- Plugin Sweet alert -->  
+  <script src="plugins/sweetalert/sweetalert.min.js"></script>  		  
+	<!-- Plugins Alertify -->  
+  <script src="plugins/alertifyjs/js/alertify.min.js"></script> 
+
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+
+
+  <script>
+
+    		$("#btnSA_3").click(function (){
+			swal({
+			  title: "¿Está seguro?",
+			  text: "Una vez guardado, no se borrara tu registro",
+			  icon: "warning",
+			  buttons: true,
+			  dangerMode: true,
+			})
+			.then((willDelete) => {
+			  if (willDelete) {
+				swal("Gracias por se uno de nuestros Simpatizantes!", {
+				  icon: "success",
+				});
+			  } else {
+				swal("Operación cancelada!");
+			  }
+			});	
+		});
+
+  </script>
+
+    
+</body>
+</html>

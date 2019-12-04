@@ -1,0 +1,85 @@
+.validar{
+
+	display: block;
+
+}
+
+.registro_miembro{
+
+	display: none;
+
+}
+
+.show_error{
+
+	display: none;
+
+}
+
+.social-list {
+    background-color: rgba(0,0,0,0.4);
+}
+
+.social-list {
+    height: 3em;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    text-align: center;
+}
+.social-list li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 2px;
+}
+.social-list a {
+    width: 3.5em !important;
+    line-height: 4em !important;
+    color: white;
+}
+
+.social-list a {
+    display: block;
+    height: 3em;
+    width: 2.5em;
+    line-height: 3em;
+    background: transparent;
+    -o-transition: background 300ms linear;
+    transition: background 300ms linear;
+    border-radius: 5px;
+}
+
+.social-list i {
+    font-size: 2em !important;
+}
+
+.social-list i {
+    -o-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.social-list a:hover i {
+    -webkit-animation: spin 300ms linear;
+    animation: spin 300ms linear;
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {-webkit-transform:rotate(0deg);transform:rotate(0deg);}
+    to {-webkit-transform:rotate(360deg);transform:rotate(360deg);}
+}
+
+@media only screen and (max-width : 1024px) {
+    .social-list {font-size: 16px!important;}
+}
+
+@media only screen and (max-width : 680px) {
+    .social-list {font-size: 15px!important;}
+}
+
+@media only screen and (max-width : 560px) {
+    .social-list {font-size: 14px!important;}
+}

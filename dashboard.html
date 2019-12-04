@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Panel de control</title>
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+    <!--<object data="columna.html"></object>-->
+    <!--<iframe src="columna.html"></iframe>-->
+    <!-- Sidebar -->
+<ul class="navbar-nav bg-gradient-info sidebar sidebar-dark accordion" id="accordionSidebar">
+
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="dashboard.html">
+      <!-- <div class="sidebar-brand-icon rotate-n-15"> -->
+        <!-- <i class="fas fa-laugh-wink"></i> -->
+      <!-- </div> -->
+      <div><img src="FORMULARIO REGISTRO LANZATE_files/logoLanzate-03.png"  WIDTH=120 HEIGHT=120></div>
+      <!-- <div class="sidebar-brand-text mx-3">AVANZA tu voto</div> -->
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="dashboard.html">
+        <i class="fas fa-fw fa-tachometer-alt"></i>
+        <span>Panel de Control</span></a>
+    </li>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider">
+
+    <!-- Heading -->
+    <div class="sidebar-heading">
+      Coordinadores
+    </div>
+
+    <li class="nav-item active">
+      <a class="nav-link" href="tables.html">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Coord Nacional</span></a>
+    </li>
+
+    
+    <li class="nav-item active">
+      <a class="nav-link" href="cp1.html">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Coord Provinciales</span></a>
+    </li>
+
+  
+    <li class="nav-item active">
+      <a class="nav-link" href="cm1.html">
+        <i class="fas fa-fw fa-user"></i>
+        <span>Coord Municipales</span></a>
+    </li>
+
+ 
+    <li class="nav-item active">
+      <a class="nav-link" href="cdm1.html">
+        <i class="fas fa-fw fa-user"></i>
+        <span>C. Distritos Municipales</span></a>
+    </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" href="cr1.html">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Coord Recinto</span></a>
+    </li>
+
+    <li class="nav-item active">
+        <a class="nav-link" href="cmm1.html">
+          <i class="fas fa-fw fa-user"></i>
+          <span>Coord de Mesas</span></a>
+    </li>
+  
+  
+
+
+    <hr class="sidebar-divider">
+    
+    <li class="nav-item active">
+      <a class="nav-link" href="buzonConsulta.html">
+        <i class="fas fa-fw fa-list"></i>
+        <span>Buzon de Consulta</span></a>
+    </li>
+    
+  <!-- Divider -->
+  <hr class="sidebar-divider d-none d-md-block">
+
+  <!-- Sidebar Toggler (Sidebar) -->
+  <div class="text-center d-none d-md-inline">
+    <button class="rounded-circle border-0" id="sidebarToggle"></button>
+  </div>
+
+</ul>
+<!-- End of Sidebar -->
+
+
+
+
+<!-- Content Wrapper -->
+<div id="content-wrapper" class="d-flex flex-column">
+
+        <!-- Main Content -->
+        <div id="content">
+  
+          <!-- Topbar -->
+          <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+  
+            <!-- Sidebar Toggle (Topbar) -->
+            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+              <i class="fa fa-bars"></i>
+            </button>
+  
+            <!-- Topbar Navbar -->
+            <ul class="navbar-nav ml-auto">
+  
+              <!-- Nav Item - Alerts -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-bell fa-fw"></i>
+                  <!-- Counter - Alerts -->
+                  <span class="badge badge-danger badge-counter">3+</span>
+                </a>
+                <!-- Dropdown - Alerts -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+                  <h6 class="dropdown-header">
+                    Notificaciones
+                  </h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-primary">
+                        <i class="fas fa-file-alt text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">Diciembre 12, 2019</div>
+                      <span class="font-weight-bold">Este es una notificacion de prueba de archivos!</span>
+                    </div>
+                  </a>
+                  
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="mr-3">
+                      <div class="icon-circle bg-warning">
+                        <i class="fas fa-exclamation-triangle text-white"></i>
+                      </div>
+                    </div>
+                    <div>
+                      <div class="small text-gray-500">Diciembre 2, 2019</div>
+                      Notificaciones de alerta, para algo urgente!!
+                    </div>
+                  </a>
+                  <a class="dropdown-item text-center small text-gray-500" href="#">Mostrar todas las alertas</a>
+                </div>
+              </li>
+  
+              <!-- Nav Item - Messages -->
+              <li class="nav-item dropdown no-arrow mx-1">
+                <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-envelope fa-fw"></i>
+                  <!-- Counter - Messages -->
+                  <span class="badge badge-danger badge-counter">7</span>
+                </a>
+                <!-- Dropdown - Messages -->
+                <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+                  <h6 class="dropdown-header">
+                    Message Center
+                  </h6>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="https://source.unsplash.com/fn_BT9fwg_E/60x60" alt="">
+                      <div class="status-indicator bg-success"></div>
+                    </div>
+                    <div class="font-weight-bold">
+                      <div class="text-truncate">Hola, estoy enviando un mensaje de prueba.</div>
+                      <div class="small text-gray-500">Emily Fowler · 58m</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="https://source.unsplash.com/AU4VPcFN4LE/60x60" alt="">
+                      <div class="status-indicator"></div>
+                    </div>
+                    <div>
+                      <div class="text-truncate">Por favor, se sabe que gonzalo ganara, porque dudas?</div>
+                      <div class="small text-gray-500">Jae Chun · 1d</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="https://source.unsplash.com/CS2uCrpNzJY/60x60" alt="">
+                      <div class="status-indicator bg-warning"></div>
+                    </div>
+                    <div>
+                      <div class="text-truncate">El ultimo mes muchas mas personas se hicieron simpatizantes de Gonzalo</div>
+                      <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item d-flex align-items-center" href="#">
+                    <div class="dropdown-list-image mr-3">
+                      <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60" alt="">
+                      <div class="status-indicator bg-success"></div>
+                    </div>
+                    <div>
+                      <div class="text-truncate">Somos mensajes de pruebas, asi que no nos hagas mucho casos</div>
+                      <div class="small text-gray-500">Chicken the Dog · 2s</div>
+                    </div>
+                  </a>
+                  <a class="dropdown-item text-center small text-gray-500" href="#">Leer mas mensajes</a>
+                </div>
+              </li>
+  
+              <div class="topbar-divider d-none d-sm-block"></div>
+  
+              <!-- Nav Item - User Information -->
+              <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="mr-2 d-none d-lg-inline text-gray-600 small">Usuario Prueba</span>
+                  <img class="img-profile rounded-circle" src="img/logo.jpeg">
+                </a>
+                <!-- Dropdown - User Information -->
+                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Perfil
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Soporte a Usuario
+                  </a>
+                  <a class="dropdown-item" href="#">
+                      <i class="fas fa-exclamation-triangle fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Ayuda
+                    </a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">
+                      <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Cambiar Contraseña
+                    </a>
+                  <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    Cerrar Sesion
+                  </a>
+
+                </div>
+              </li>
+  
+            </ul>
+  
+          </nav>
+          <!-- End of Topbar -->
+
+
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+
+          <!-- Page Heading -->
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Panel de Control</h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#form-user"><i class="fas fa-user fa-sm text-white-50"></i>
+              Agregar Usuarios
+            </a>
+          </div>
+
+          <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1></h1>
+            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" data-toggle="modal" data-target="#form-guardar"><i class="fas fa-laugh-wink fa-sm text-white-50"></i>
+              Nuevo Simpatizante
+            </a>
+          </div>
+
+          <!-- Content Row -->
+          <div class="row">
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-secondary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-secondary text-uppercase mb-1">Total de Electores</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">705,243</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-primary shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Electores Trabajados</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">113,456</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-xl-3 col-md-6 mb-4"></div>
+            <div class="col-xl-3 col-md-6 mb-4"></div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-success shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">A favor</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">90,234</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Earnings (Monthly) Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-warning shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Indecisos</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">5,024</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pending Requests Card Example -->
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card border-left-danger shadow h-100 py-2">
+                <div class="card-body">
+                  <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                      <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">En contra</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">18,198</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Row -->
+
+          <div class="row">
+
+            <!-- Area Chart -->
+            <div class="col-xl-8 col-lg-7">
+              <div class="card shadow mb-4">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary"></h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div>                    
+                    <img src="FORMULARIO REGISTRO LANZATE_files/logoLanzate-03.png"  WIDTH=500 HEIGHT=400>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pie Chart -->
+            <div class="col-xl-4 col-lg-5">
+              <div class="card shadow mb-4 border-bottom-success">
+                <!-- Card Header - Dropdown -->
+                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                  <h6 class="m-0 font-weight-bold text-primary">Simpatizantes Registrado</h6>
+                  <div class="dropdown no-arrow">
+                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
+                      <div class="dropdown-header">Dropdown Header:</div>
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class=>
+                    <!--<canvas id="myPieChartMDG"></canvas>-->
+                    <h3>+87,528</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /.container-fluid -->
+
+      </div>
+      <!-- End of Main Content -->
+
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
+        <object data="footer.html" height="100px" width="100%" name="contenedor"></object>
+      </footer>
+      <!-- End of Footer -->
+
+    </div>
+    <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Listo para salir?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">Seleccionar "Cerrar Sesion" para poder salir de su escritorio.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+          <a class="btn btn-primary" href="login.html">Cerrar Sesion</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!--******************************************************************************************-->
+    <div class="modal fade" id="form-user" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Agregar Usuario</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="input-group">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Ingresar Cedula" aria-label="Search" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                  <i class="fas fa-search fa-sm"></i>
+                </button>
+              </div>
+            </div>
+    
+          <div class="modal-body">
+            
+            <form>
+              <div class="form-group">
+                <label class="col-form-label">Nombre: </label>
+                <input type="text" class="form-control" id="n-celular" disabled placeholder="George Luciano Jimenez">
+              </div>
+              <div class="form-group">
+                  <label for="exampleFormControlSelect1">Example select</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Coordinador Provincial</option>
+                    <option>Coordinador Municipal</option>
+                    <option>Coordinador Distrito Municipal</option>
+                    <option>Coordinador de Recinto</option>
+                    <option>Coordinador de Mesa</option>
+                  </select>
+                </div>
+            
+              
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="agregarUser" type="button" class="btn btn-primary" data-dismiss="modal">Agregar</button>
+            </div>
+        </div>
+      </div>
+    </div>
+
+      <!--******************************************************************************************-->
+  <div class="modal fade" id="form-guardar" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title">Datos para Guardar</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="input-group">
+            <input type="text" class="form-control bg-light border-0 small" placeholder="Ingresar Cedula" aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-primary" type="button">
+                <i class="fas fa-search fa-sm"></i>
+              </button>
+            </div>
+          </div>
+  
+        <div class="modal-body">
+            <label>George Junior Luciano Jimenez</label>
+            <h1></h1>
+            <label>402-0046119-8</label>
+          <form>
+            <div class="form-group">
+              <label class="col-form-label">Celular: </label>
+              <input type="text" class="form-control" id="n-celular" placeholder="809-000-1111">
+            </div>
+            <div class="form-group">
+                  <label class="col-form-label">Correo Electronico: </label>
+                  <input type="text" class="form-control" id="email" placeholder="Opcional">
+                </div>
+            <div class="form-group">
+              <label for="message-text" class="col-form-label">Direccion</label>
+              <textarea class="form-control" id="direccion"></textarea>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button id="addSimpatizante" type="button" class="btn btn-primary" data-dismiss="modal">Guardar</button>
+          </div>
+      </div>
+    </div>
+  </div>
+  <!--******************************************************************************************-->
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Core plugin JavaScript-->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for all pages-->
+  <script src="js/sb-admin-2.min.js"></script>
+
+  <!-- Page level plugins -->
+  <script src="vendor/chart.js/Chart.min.js"></script>
+
+  <!-- Page level custom scripts -->
+  <script src="js/demo/klk1.js"></script>
+  <script src="js/demo/klk.js"></script>
+
+  	<!-- Plugin Sweet alert -->  
+    <script src="plugins/sweetalert/sweetalert.min.js"></script>  		  
+    <!-- Plugins Alertify -->  
+    <script src="plugins/alertifyjs/js/alertify.min.js"></script> 
+
+
+    <script>
+
+    		$("#agregarUser").click(function (){
+			swal({
+			  title: "¿Está seguro?",
+			  text: "Una vez agregado el usuario, usted NO podra eliminarlo",
+			  icon: "warning",
+			  buttons: true,
+			  dangerMode: true,
+			})
+			.then((willDelete) => {
+			  if (willDelete) {
+				swal("Nuevo usuario Agregado con exito!", {
+				  icon: "success",
+				});
+			  } else {
+				swal("Operación cancelada!");
+			  }
+			});	
+		});
+
+  </script>
+
+
+<script>
+
+    $("#addSimpatizante").click(function (){
+  swal("Se agrego el Nuevo Simpatizante de Gonzalo!", {
+      icon: "success",
+    });
+    
+  });	
+
+</script>
+
+</body>
+
+</html>

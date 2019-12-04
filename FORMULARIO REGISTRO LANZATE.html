@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!-- saved from url=(0039)https://www.lanzate.com.do/formLanzate/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    <meta name="viewport" content="width=divice-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>FORMULARIO REGISTRO LANZATE</title>
+	<link rel="stylesheet" href="./FORMULARIO REGISTRO LANZATE_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="./FORMULARIO REGISTRO LANZATE_files/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./FORMULARIO REGISTRO LANZATE_files/estilos.css">
+	<!-- Sweet Alert -->
+	<link href="./FORMULARIO REGISTRO LANZATE_files/sweetalert.css" rel="stylesheet">
+	<link rel="icon" type="image/png" href="https://www.lanzate.com.do/formLanzate/images/favicon.png">
+</head>
+<body style="background: -moz-linear-gradient(-45deg, #DA9326 0%, #529091 80%); background: -webkit-linear-gradient(-45deg, #DA9326 0%, #529091 80%); background: linear-gradient(135deg,#DA9326 0%, #529091 80%); background-repeat: no-repeat; background-size: 100% 800px; display: flex; flex-direction: column;">
+<div class="container-fluid h-100">
+	<div class="row show_error">
+		<div class="col-lg-3 col-md-3 col-xs-12 col-sm-12"></div>
+		<div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
+			<div class="alert alert-danger">
+				Cedula no encontrada
+			</div>
+		</div>
+		<div class="col-lg-3 col-md-3 col-xs-12 col-sm-12"></div>
+	</div>
+
+	<div class="row validar_miembro">
+		<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+			<h1 class="display-4"><img src="./FORMULARIO REGISTRO LANZATE_files/logoLanzate-03.png" alt="logo lanzate" width="300"></h1>
+			<p class="lead"><strong style="text-shadow: 3px 2px white; font-weight: 800;">FORMULARIO DE REGISTRO</strong></p>
+			<div class="consultar">
+				<form name="consultar" method="post" onsubmit="return false;">
+					<div class="form-group">
+						<input type="text" name="cedula" id="cedula" class="form-control cedula_c" required="" autocomplete="off" placeholder="Digite su cédula">
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-warning btn-lg btn-block" onclick="consultar_miembro();">CONSULTAR</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="row registro_miembro">
+		<div class="col-lg-3 col-md-3 col-xs-12 col-sm-12"></div>
+		<div class="col-lg-6 col-md-6 col-xs-12 col-sm-12 text-center">
+			<h3 style="text-shadow: 3px 2px white; font-weight: 800;">COMPLETAR FORMULARIO</h3>
+			<form method="post" onsubmit="return false;" autocomplete="off">
+				<div class="form-group row">
+					<label for="cedula_v" class="col-sm-2 col-xs-12 col-form-label"><strong>Cédula</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control cedula_v" id="cedula_v" placeholder="Cédula" readonly="">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="nombre" class="col-sm-2 col-xs-12 col-form-label"><strong>Nombre</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control nombre" id="nombre" placeholder="Nombre" required="">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="direccion" class="col-sm-2 col-xs-12 col-form-label"><strong>Dirección</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control direccion" id="direccion" placeholder="Dirección residencia">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="provincia_res" class="col-sm-2 col-xs-12 col-form-label"><strong>Provincia</strong></label>
+					<div class="col-sm-4 col-xs-12">
+						<input type="text" class="form-control provincia_res" id="provincia_res" placeholder="Provincia residencia">
+					</div>
+					<label for="municipio_res" class="col-sm-2 col-xs-12 col-form-label"><strong>Municipio</strong></label>
+					<div class="col-sm-4 col-xs-12">
+						<input type="text" class="form-control municipio_res" id="municipio_res" placeholder="Municipio residencia">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="sector_res" class="col-sm-2 col-xs-12 col-form-label"><strong>Sector</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control sector_res" id="sector_res" placeholder="Sector residencia">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="movil" class="col-sm-2 col-xs-12 col-form-label"><strong>Movil</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control movil" id="movil" placeholder="Movil" required="">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="coordinador" class="col-sm-2 col-xs-12 col-form-label"><strong>Coord.</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control coordinador" id="coordinador" placeholder="Coordinador">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="correo" class="col-sm-2 col-xs-12 col-form-label"><strong>Correo</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="email" class="form-control correo" id="correo" placeholder="Correo Electrónico" required="">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="facebook" class="col-sm-2 col-xs-12 col-form-label"><strong><i class="fa fa-facebook-square fa-lg"></i></strong></label>
+					<div class="col-sm-4 col-xs-12">
+						<input type="text" class="form-control facebook" id="facebook" placeholder="Facebook">
+					</div>
+					<label for="twitter" class="col-sm-2 col-xs-12 col-form-label"><strong><i class="fa fa-twitter fa-lg"></i></strong></label>
+					<div class="col-sm-4 col-xs-12">
+						<input type="text" class="form-control twitter" id="twitter" placeholder="Twitter">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="instagram" class="col-sm-2 col-xs-12 col-form-label"><strong><i class="fa fa-instagram fa-lg"></i></strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control instagram" id="instagram" placeholder="Instagram">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="nombre" class="col-sm-2 col-xs-12 col-form-label"><strong>Recinto</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control recinto" id="recinto" placeholder="Recinto (Centro de Votación)" required="">
+					</div>
+				</div>
+				<div class="form-group row">
+					<label for="nombre" class="col-sm-2 col-xs-12 col-form-label"><strong>Colegio</strong></label>
+					<div class="col-sm-10 col-xs-12">
+						<input type="text" class="form-control colegio-electoral" id="colegio-electoral" placeholder="Colegio (Mesa)" required="">
+					</div>
+				</div>
+				<div class="form-group">
+					<input type="hidden" name="nacimiento" class="nacimiento" value="">
+					<input type="hidden" name="sexo" class="sexo" value="">
+					<input type="hidden" name="id_provincia" class="id_provincia" value="">
+					<input type="hidden" name="id_municipio" class="id_municipio" value="">
+					<input type="hidden" name="Provincia" class="Provincia">
+					<input type="hidden" name="Municipio" class="Municipio">
+					<input type="hidden" name="DireccionRecinto" class="DireccionRecinto">
+					<input type="hidden" name="Sector" class="Sector">
+					<input type="hidden" name="CodigoRecinto_e" class="CodigoRecinto_e">
+					<button type="submit" class="btn btn-success btn-lg btn-block save" onclick="registrar_miembro();">REGISTRAR</button>
+				</div>
+			</form>
+		</div>
+		<div class="col-lg-3 col-md-3 col-xs-12 col-sm-12"></div>
+	</div>
+</div>
+<footer>
+	<ul class="social-list">
+		<li class="social-child">
+			<a href="https://www.facebook.com/LanzateDO/" target="top" class="social-facebook">
+				<i class="fa fa-facebook" aria-hidden="true"></i>
+			</a>
+		</li>
+		<li class="social-child">
+			<a href="https://twitter.com/LanzateDO/" target="top" class="social-twitter">
+				<i class="fa fa-twitter" aria-hidden="true"></i>
+			</a>
+		</li>
+		<li class="social-child">
+			<a href="https://www.instagram.com/LanzateDO/" target="top" class="social-instagram">
+				<i class="fa fa-instagram" aria-hidden="true"></i>
+			</a>
+		</li>
+	</ul>
+</footer>
+
+<!--Core js-->
+<script src="./FORMULARIO REGISTRO LANZATE_files/jquery.min.js.descarga"></script>
+<script src="./FORMULARIO REGISTRO LANZATE_files/bootstrap.min.js.descarga" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./FORMULARIO REGISTRO LANZATE_files/jquery.maskedinput.js.descarga"></script>
+<!-- Sweet Alert -->
+<script src="./FORMULARIO REGISTRO LANZATE_files/sweetalert.min.js.descarga"></script>
+<!-- custom functions js -->
+<script type="text/javascript" src="./FORMULARIO REGISTRO LANZATE_files/functions.js.descarga"></script>
+<script type="text/javascript">
+$(document).ready(function($){
+	$("#cedula, #cedula_v").mask("999-9999999-9");
+	$("#movil").mask("999-999-9999");
+
+	$('.save').on('click', function() {
+    var $this = $(this);
+    var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> Guardando la información...';
+    if ($(this).html() !== loadingText) {
+      $this.data('original-text', $(this).html());
+      $this.html(loadingText);
+    }
+    setTimeout(function() {
+      $this.html($this.data('original-text'));
+    }, 10000);
+  });
+
+});
+</script>
+</body></html>
